@@ -18,3 +18,10 @@
     font-weight: bold;
     padding-top: 5px;
   }
+  .task-delete-btn{
+      padding: 7px 15px;
+      border-radius: 2px;
+      background-color: #5f4fe4;
+      color: #fff;
+      border: none;
+  }

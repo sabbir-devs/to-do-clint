@@ -76,22 +76,24 @@ a:hover{
         align-items: center;
         justify-content: center;
         padding: 20px;
-        background: #1e1e30;
+        background: rgb(168, 168, 168);
         position: absolute;
         top: -2000px;
         right: 0;
         transition: .25s;
+        z-index: 100;
     }
     .header .nav-close{
         display: grid;
         align-items: center;
         justify-content: center;
         padding: 20px;
-        background: #1e1e30;
+        background: rgb(168, 168, 168);
         position: absolute;
         top: 70px;
         right: 0;
         transition: .25s;
+        z-index: 100;
     }
     .header .link-btn{
         margin-top: 5px;

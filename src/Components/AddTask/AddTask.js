@@ -1,12 +1,25 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import './AddTask.css';
 
 const AddTask = () => {
     const handleTaskSubmit = event => {
         event.preventDefault()
-        const email = event.target.title.value
+        const name = event.target.title.value
         const description = event.target.description.value;
-        console.log(email, description)
+        const data = {name, description};
+        fetch(`https://sheltered-temple-82819.herokuapp.com/task`, {
+            method:"POST",
+            headers:{
+                "content-type" : "application/json",
+            },
+            body: JSON.stringify({data}),
+        })
+        .then((res) => res.json())
+        .then(data => {
+            console.log('success', data)
+            toast.success("Task Add Sucessfull", { id: "toast5" });
+        } )
     }
     return (
         <div className='add-task'>
